@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>聚焦动画</title>
+	<style>
+	.container .item{margin:0 !important;color:#9feaf9;background-color:#2b2e3b;border-color:#111218}
+	.container .item-content{padding:12px}
+	.container .item-content .item{max-width:calc(100vw - 50px);min-height:100px;text-align:center}
+	@media (min-width: 768px){
+		.container{display:flex}
+		.container .item-content{flex:1;overflow:hidden;transition:opacity 0.4s ease-in-out, flex 0.4s ease-in-out}
+
+		.container:hover .item-content{
+		  opacity:0.6
+		}
+		.container .item-content:hover{
+		  flex:2;
+		  opacity:1
+		}
+	}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-content">
+        <div class="item">
+          A
+        </div>
+      </div>
+      <div class="item-content ">
+          <div class="item">
+            B
+          </div>
+        </div>
+        <div class="item-content">
+            <div class="item">
+              C
+            </div>
+          </div>
+    </div>
+  </body>
+</html>
